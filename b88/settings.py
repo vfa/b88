@@ -121,6 +121,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#custom settings
+SMS_APPID = 1
+SMS_APPKEY = '1'
+SMS_APPSIGN = '1'
+SMS_TEMPLATEID = 1
+SMS_PHONE = 1
 try:
     from .local_settings import *
 except ImportError:
