@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('send/sms', include('app01.urls')),
+    path('app/', include('app01.urls', namespace='app01')),  #反向解析namespace(app01):name(register)
+    path('', include('web.urls')),
 ]

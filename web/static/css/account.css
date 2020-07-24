@@ -1,0 +1,19 @@
+.accout {
+    width: 400px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right:  auto;
+    border: 1px solid #f1f1f1;
+    padding: 10px 30px 30px 30px;
+    -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, .05);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, .05);
+}
+.accout .title {
+    font-size: 30px;
+    font-width: bold;
+    text-align: center;
+}
+.accout .form-group {
+    margin-bottom: 15px;
+}
+

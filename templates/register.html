@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册用户</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .accout{
+            width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class ="accout">
+    <h1 style="text-align: center">注册</h1>
+    <form>
+    {% for f in form %}
+        {% if f.name == 'code' %}
+                <div class="form-group">
+                    <label for={{ f.id_for_label }}>{{ f.label }}</label>
+                    <div class="clearfix">
+                        <div class="col-md-6" style="padding-left: 0"> {{ f }}</div>
+                        <div class="col-md-6"><input type="button" class="btn btn-default" value="点击获取验证码" /></div>
+                    </div>
+                </div>
+        {% else %}
+            <div class="form-group">
+                <label for={{ f.id_for_label }}>{{ f.label }}</label>
+                <!--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"> -->
+                {{ f }}
+            </div>
+        {% endif %}
+    {% endfor %}
+        <button type="submit" class="btn btn-primary">注册</button>
+    </form>
+
+</div>
+</body>
+</html>
